@@ -1,0 +1,239 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* bg color #AEAFB1 */
+body {
+  background: #aeafb1;
+}
+.header {
+  width: 100%;
+  height: 100vh;
+  /* background-image: url("../img/bg.jpg"); */
+  background-image: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.3),
+      rgba(255, 255, 255, 0.382)
+    ),
+    url("../img/bg.jpg");
+
+  background-size: cover;
+  background-position: top;
+}
+@media only screen and (max-width: 480px) {
+  .header {
+    background-image: linear-gradient(
+        to top,
+        rgba(0, 0, 0, 0.43),
+        rgba(255, 255, 255, 0.507)
+      ),
+      url("../img/bg.jpg");
+  }
+}
+.sticky-nav {
+  width: 100%;
+  background: #fff;
+  z-index: 999 !important;
+  border-bottom: 1px solid #555;
+}
+.sticky-nav > ul > li > a {
+  color: #000 !important;
+}
+.sticky-nav > ul {
+  padding-top: 20px !important;
+  padding-left: 50px !important;
+  padding-bottom: 20px;
+}
+nav {
+  position: fixed;
+  transition: 0.3s;
+}
+nav > ul {
+  transition: 0.3s;
+  padding-top: 50px;
+  padding-left: 120px;
+}
+nav > ul > li {
+  display: inline-block;
+  padding: 10px;
+}
+nav > ul > li > a {
+  color: #fff;
+  text-decoration: none;
+  font-family: "Oswald", sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.5px;
+}
+.header-main {
+  padding-top: 220px;
+  padding-left: 120px;
+  color: #fff;
+}
+.header-title {
+  font-family: "Bebas Neue", cursive;
+  font-size: 55px;
+  letter-spacing: 8px;
+}
+.header-title > span {
+  font-size: 95px;
+  letter-spacing: 0;
+}
+.header-btn {
+  margin: 30px 0;
+}
+.header-btn > a {
+  text-decoration: none;
+  background: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  border: 2px solid #fff;
+  transition: 0.4s;
+}
+.header-btn > a:hover {
+  background: #fff;
+  color: #000;
+  box-shadow: 0 0 2px 25px rgba(221, 221, 221, 0.599) inset, 0 5px 10px #fff;
+}
+.container {
+  position: relative;
+  top: 150px;
+}
+.market {
+  width: 80%;
+  margin: 0 auto;
+  height: 50vh;
+}
+.market-list {
+  padding: 35px 0;
+}
+.search-box {
+  background: #fff;
+  display: flex;
+  align-items: center;
+  width: 50%;
+  padding: 15px;
+  border-radius: 10px;
+}
+.search-box > input {
+  background: none;
+  border: none;
+  outline: none;
+  padding: 4px;
+  font-size: 15px;
+  width: 90%;
+}
+.search-box > input::placeholder {
+  font-size: 15px;
+}
+.search-box > label {
+  width: 10%;
+  margin: 0 8px;
+}
+table {
+  width: 100%;
+  margin-top: 20px;
+}
+table > thead {
+  background: #fff;
+}
+table > thead > th {
+  padding: 10px;
+  font-size: 15px;
+  color: #555555e8;
+  border: none;
+}
+table > tbody > tr > td {
+  background: #fff;
+  text-align: center;
+}
+.currency-img > img {
+  width: 15px;
+}
+.table-head {
+  font-weight: bold;
+}
+.table-head,
+.table-child {
+  margin-top: 25px;
+  display: flex;
+  justify-content: space-evenly;
+  /* flex-basis: 25%; */
+  align-items: center;
+  background: #fff;
+  border-radius: 15px;
+  padding: 15px;
+}
+.table-child > div,
+.table-head > div {
+  flex-basis: 25%;
+  text-align: center;
+}
+.cr-icon > img {
+  width: 20px;
+  margin-top: 5px;
+}
+.d-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+}
+.dump {
+  color: red;
+}
+.pump {
+  color: green;
+}
+@media only screen and (max-width: 520px) {
+  .market {
+    width: 95%;
+  }
+  .search-box {
+    width: 100%;
+    font-size: 13px;
+    flex-wrap: nowrap;
+  }
+  .table-child,
+  .table-head {
+    font-size: 10px;
+  }
+  nav > ul, .sticky-nav > ul {
+    padding-top: 10px !important;
+    padding-left: 40px !important;
+    padding-bottom: 10px;
+  }
+  nav > ul > li > a {
+    font-size: 18px;
+  }
+  .header-main {
+    padding-top: 350px;
+    padding-left: 20px;
+    color: #fff;
+  }
+  nav > ul {
+
+  }
+}
+.about-container {
+  background: #aeafb1;
+}
+.about {
+  padding-top: 100px;
+  width: 90%;
+  margin: 0 auto;
+  color: #fff;
+}
+.about-hyper {
+  font-weight: bold;
+  font-size: 22px;
+}
+.more-table {
+  background: #fff;
+  border: 2px solid #555;
+  color: #000;
+}
+.d-none {
+  display: none;
+}
