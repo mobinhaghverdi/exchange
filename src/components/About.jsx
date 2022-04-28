@@ -6,10 +6,11 @@ const About = () => {
             <Nav />
             <div className="about">
                 <div className="about-hyper">
-                    Crypto Price
+                    Crypto Price App
                 </div>
                 <p>This Website Has Been Developed By <br /> Mobin Haghverdi <br />
-                    Front End Developer...</p>
+                    With ❤️ And ☕</p>
+                <a href="https://github.com/mobinhaghverdi">My Github <i className='fab fa-github'></i></a>
             </div>
         </div>
     );

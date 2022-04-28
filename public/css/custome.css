@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald&family=Poppins&display=swap');");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +7,7 @@
 /* bg color #AEAFB1 */
 body {
   background: #aeafb1;
+  font-family: "Poppins", sans-serif;
 }
 .header {
   width: 100%;
@@ -36,7 +37,9 @@ body {
   width: 100%;
   background: #fff;
   z-index: 999 !important;
-  border-bottom: 1px solid #555;
+  /* border-bottom: 1px solid #555; */
+  box-shadow: 0 0 20px #555;
+  border-bottom-right-radius: 15px;
 }
 .sticky-nav > ul > li > a {
   color: #000 !important;
@@ -62,7 +65,7 @@ nav > ul > li {
 nav > ul > li > a {
   color: #fff;
   text-decoration: none;
-  font-family: "Oswald", sans-serif;
+  font-family: "Oswald", sans-serif !important;
   font-size: 22px;
   letter-spacing: 0.5px;
 }
@@ -71,8 +74,10 @@ nav > ul > li > a {
   padding-left: 120px;
   color: #fff;
 }
+.header-main > main > div {
+  font-family: "Bebas Neue", cursive !important;
+}
 .header-title {
-  font-family: "Bebas Neue", cursive;
   font-size: 55px;
   letter-spacing: 8px;
 }
@@ -107,6 +112,7 @@ nav > ul > li > a {
 }
 .market-list {
   padding: 35px 0;
+  position: relative;
 }
 .search-box {
   background: #fff;
@@ -123,6 +129,7 @@ nav > ul > li > a {
   padding: 4px;
   font-size: 15px;
   width: 90%;
+  font-family: "Poppins", sans-serif;
 }
 .search-box > input::placeholder {
   font-size: 15px;
@@ -130,23 +137,6 @@ nav > ul > li > a {
 .search-box > label {
   width: 10%;
   margin: 0 8px;
-}
-table {
-  width: 100%;
-  margin-top: 20px;
-}
-table > thead {
-  background: #fff;
-}
-table > thead > th {
-  padding: 10px;
-  font-size: 15px;
-  color: #555555e8;
-  border: none;
-}
-table > tbody > tr > td {
-  background: #fff;
-  text-align: center;
 }
 .currency-img > img {
   width: 15px;
@@ -162,7 +152,7 @@ table > tbody > tr > td {
   /* flex-basis: 25%; */
   align-items: center;
   background: #fff;
-  border-radius: 15px;
+  border-radius: 15px !important;
   padding: 15px;
 }
 .table-child > div,
@@ -186,20 +176,42 @@ table > tbody > tr > td {
 .pump {
   color: green;
 }
+.loader {
+  position: absolute;
+  top: 170%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.warning {
+  text-align: center;
+  color: red;
+  background: white;
+  border-radius: 15px;
+  width: 97%;
+  margin: 30px auto;
+  padding: 15px;
+}
+.warning > img {
+  width: 100%;
+}
 @media only screen and (max-width: 520px) {
   .market {
-    width: 95%;
+    width: 97%;
   }
   .search-box {
     width: 100%;
-    font-size: 13px;
+    font-size: 11px;
     flex-wrap: nowrap;
+  }
+  .search-box > label {
+    font-size: 17px;
   }
   .table-child,
   .table-head {
-    font-size: 10px;
+    font-size: 12px;
   }
-  nav > ul, .sticky-nav > ul {
+  nav > ul,
+  .sticky-nav > ul {
     padding-top: 10px !important;
     padding-left: 40px !important;
     padding-bottom: 10px;
@@ -212,18 +224,32 @@ table > tbody > tr > td {
     padding-left: 20px;
     color: #fff;
   }
-  nav > ul {
-
+  .market-list {
+    padding: 10px 0;
+  }
+  .search-box {
+    padding: 8px;
+  }
+}
+@media only screen and (max-width: 380px) {
+  .table-child,
+  .table-head {
+    font-size: 10px;
   }
 }
 .about-container {
   background: #aeafb1;
 }
 .about {
-  padding-top: 100px;
+  text-align: center;
+  padding-top: 200px;
   width: 90%;
   margin: 0 auto;
   color: #fff;
+}
+.about > a {
+  color: red;
+  text-decoration: none;
 }
 .about-hyper {
   font-weight: bold;
@@ -231,8 +257,9 @@ table > tbody > tr > td {
 }
 .more-table {
   background: #fff;
-  border: 2px solid #555;
+  /* border: 2px solid #555; */
   color: #000;
+  cursor: pointer;
 }
 .d-none {
   display: none;

@@ -8,5 +8,6 @@ export const getData = () => {
         "Content-Type": "Application/json",
       },
     }
-  );
+
+  )
 };
