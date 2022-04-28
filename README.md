@@ -2,7 +2,6 @@
 
 My Personal [Website](https://mobinhaghverdi.ir).
 
-## What This Website Do ?
 
 In This Project We Have Access To Ahundred Crypto Currencies Price
 
