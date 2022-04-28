@@ -11,7 +11,7 @@ const Market = () => {
 
     const [data, setData] = useState([])
     const [list, setList] = useState([])
-    const [LIMIT, setLIMIT] = useState(7)
+    const [LIMIT, setLIMIT] = useState(10)
     const [message, setMessage] = useState("Show More...")
     const [loader, setLoader] = useState(true)
 
@@ -37,7 +37,7 @@ const Market = () => {
 
     const handleLimitation = () => {
         if (LIMIT <= data.length) {
-            setLIMIT(LIMIT + 7)
+            setLIMIT(LIMIT + 10)
         } else {
             setMessage("There Is No More!");
         }
@@ -79,9 +79,9 @@ const Market = () => {
                                 <Currency key={part.id} price={part.current_price} image={part.image} name={part.id} priceper={part.price_change_percentage_24h} status={part.price_change_percentage_24h.toString().charAt(0)} price24={part.market_cap_change_24h} />
 
                             ))}
-                            {loader ? <Skeleton className='table-child' count={7} /> : null}
+                            {loader ? <Skeleton className='table-child' baseColor="#232931" highlightColor="#393E46" count={10} /> : null}
 
-                            <div className={data.length <= 7 ? 'table-child more-table d-none' : 'table-child more-table'} onClick={handleLimitation}>
+                            <div className={data.length <= 10 ? 'table-child more-table d-none' : 'table-child more-table'} onClick={handleLimitation}>
                                 <div>{message}</div>
                             </div>
                         </div>

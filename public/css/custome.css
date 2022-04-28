@@ -6,8 +6,9 @@
 }
 /* bg color #AEAFB1 */
 body {
-  background: #aeafb1;
+  background: #232931;
   font-family: "Poppins", sans-serif;
+  color: #fff;
 }
 .header {
   width: 100%;
@@ -15,8 +16,8 @@ body {
   /* background-image: url("../img/bg.jpg"); */
   background-image: linear-gradient(
       to top,
-      rgba(0, 0, 0, 0.3),
-      rgba(255, 255, 255, 0.382)
+      rgba(0, 0, 0, 0.407),
+      rgba(255, 255, 255, 0.237)
     ),
     url("../img/bg.jpg");
 
@@ -33,25 +34,22 @@ body {
       url("../img/bg.jpg");
   }
 }
-.sticky-nav {
-  width: 100%;
-  background: #fff;
-  z-index: 999 !important;
-  /* border-bottom: 1px solid #555; */
-  box-shadow: 0 0 20px #555;
-  border-bottom-right-radius: 15px;
-}
-.sticky-nav > ul > li > a {
-  color: #000 !important;
-}
 .sticky-nav > ul {
   padding-top: 20px !important;
   padding-left: 50px !important;
   padding-bottom: 20px;
 }
+.sticky-nav {
+  width: 100%;
+  background: #222831;
+  z-index: 999 !important;
+  box-shadow: 0 0 20px #555;
+  border-bottom-right-radius: 15px;
+}
 nav {
   position: fixed;
-  transition: 0.3s;
+  width: 100%;
+  transition: 0.1s;
 }
 nav > ul {
   transition: 0.3s;
@@ -115,7 +113,7 @@ nav > ul > li > a {
   position: relative;
 }
 .search-box {
-  background: #fff;
+  background: #393E46;
   display: flex;
   align-items: center;
   width: 50%;
@@ -130,9 +128,11 @@ nav > ul > li > a {
   font-size: 15px;
   width: 90%;
   font-family: "Poppins", sans-serif;
+  color: rgb(234, 228, 228);
 }
 .search-box > input::placeholder {
   font-size: 15px;
+  color: #aeafb1;
 }
 .search-box > label {
   width: 10%;
@@ -151,7 +151,7 @@ nav > ul > li > a {
   justify-content: space-evenly;
   /* flex-basis: 25%; */
   align-items: center;
-  background: #fff;
+  background: #393E46;
   border-radius: 15px !important;
   padding: 15px;
 }
@@ -171,10 +171,10 @@ nav > ul > li > a {
   gap: 5px;
 }
 .dump {
-  color: red;
+  color: rgb(255, 29, 29);
 }
 .pump {
-  color: green;
+  color: rgb(0, 255, 0);
 }
 .loader {
   position: absolute;
@@ -237,15 +237,12 @@ nav > ul > li > a {
     font-size: 10px;
   }
 }
-.about-container {
-  background: #aeafb1;
-}
+
 .about {
   text-align: center;
   padding-top: 200px;
   width: 90%;
   margin: 0 auto;
-  color: #fff;
 }
 .about > a {
   color: red;
@@ -256,9 +253,6 @@ nav > ul > li > a {
   font-size: 22px;
 }
 .more-table {
-  background: #fff;
-  /* border: 2px solid #555; */
-  color: #000;
   cursor: pointer;
 }
 .d-none {
