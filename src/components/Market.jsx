@@ -49,20 +49,19 @@ const Market = () => {
         const filtered = list.filter(pr => pr.id.startsWith(text.toLowerCase()));
 
         setData(filtered);
-        if (filtered.length == 0) {
+        if (filtered.length === 0) {
             setNothing(true)
-        }else {
+        } else {
             setNothing(false)
         }
 
     }
-    
+
 
     const handleRefreshFeed = () => {
         setData([])
         setRefresh(!refresh)
     }
-
     return (
         <div>
             <Nav refreshFeed={handleRefreshFeed} />

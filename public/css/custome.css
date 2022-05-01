@@ -198,11 +198,12 @@ nav > ul > li > a {
   transform: translate(-50%, -50%);
 }
 .warning {
+  width: 25%;
   text-align: center;
   color: #fff;
   background: #393e46;
   border-radius: 15px;
-  width: 97%;
+  /* width: 97%; */
   margin: 30px auto;
   padding: 15px;
 }
@@ -211,6 +212,9 @@ nav > ul > li > a {
 }
 @media only screen and (max-width: 520px) {
   .market {
+    width: 97%;
+  }
+  .warning {
     width: 97%;
   }
   .search-box {
@@ -258,7 +262,7 @@ nav > ul > li > a {
 }
 
 .about {
-  position: relative; 
+  position: relative;
   text-align: center;
   top: 200px;
   width: 90%;
