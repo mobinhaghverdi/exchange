@@ -14,10 +14,12 @@ const Market = () => {
     const [LIMIT, setLIMIT] = useState(10)
     const [message, setMessage] = useState("Show More...")
     const [loader, setLoader] = useState(true)
-
+    const [refresh, setRefresh] = useState(false)
+    const [nothing, setNothing] = useState(false)
     useEffect(() => {
         setLoader(true)
         const fetchData = async () => {
+            setLoader(true)
 
             return await getData()
         }
@@ -28,9 +30,7 @@ const Market = () => {
                 setList(res.data)
             })
             .catch(err => console.log(err))
-
-
-    }, [])
+    }, [refresh])
 
 
 
@@ -44,18 +44,28 @@ const Market = () => {
     }
 
 
-    const handleChangeList = async (text) => {
+    const handleChangeList = (text) => {
 
         const filtered = list.filter(pr => pr.id.startsWith(text.toLowerCase()));
 
         setData(filtered);
+        if (filtered.length == 0) {
+            setNothing(true)
+        }else {
+            setNothing(false)
+        }
+
     }
+    
 
-
+    const handleRefreshFeed = () => {
+        setData([])
+        setRefresh(!refresh)
+    }
 
     return (
         <div>
-            <Nav />
+            <Nav refreshFeed={handleRefreshFeed} />
 
             <div className="container">
                 <div className="market">
@@ -73,7 +83,7 @@ const Market = () => {
 
 
                         <div className="table-body">
-                            {data.length === 0 && !loader ? <div className='warning'> <img src="./img/warn.png" alt="" /> <br /> There Is Not Such A Currency!!! </div> : null}
+                            {nothing ? <div className='warning'> <img src="./img/warn.png" alt="" /> <br /> There Is Not Such A Currency!!! </div> : null}
                             {data.slice(0, LIMIT).map(part => (
 
                                 <Currency key={part.id} price={part.current_price} image={part.image} name={part.id} priceper={part.price_change_percentage_24h} status={part.price_change_percentage_24h.toString().charAt(0)} price24={part.market_cap_change_24h} />
@@ -85,9 +95,6 @@ const Market = () => {
                                 <div>{message}</div>
                             </div>
                         </div>
-
-
-
                     </div>
                 </div>
             </div>

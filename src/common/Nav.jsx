@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
-const Nav = () => {
+const Nav = ({ refreshFeed }) => {
 
     const [scrolled, setScrolled] = useState(false)
 
@@ -17,7 +17,6 @@ const Nav = () => {
 
 
 
-
     return (
         <nav className={scrolled ? 'sticky-nav' : null}>
             <ul>
@@ -25,6 +24,9 @@ const Nav = () => {
                 <li><Link to="/market">Crypto</Link></li>
                 <li><Link to="/about">About</Link></li>
             </ul>
+            {window.location.pathname === "/market" ? <div className="refresh" onClick={() => refreshFeed()}>
+                <i className="fa-solid fa-arrow-rotate-right"></i>
+            </div> : null}
         </nav>
     );
 }

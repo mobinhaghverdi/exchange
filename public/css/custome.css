@@ -9,6 +9,7 @@ body {
   background: #232931;
   font-family: "Poppins", sans-serif;
   color: #fff;
+  overscroll-behavior: contain;
 }
 .header {
   width: 100%;
@@ -39,6 +40,9 @@ body {
   padding-left: 50px !important;
   padding-bottom: 20px;
 }
+.sticky-nav > div {
+  margin: 26px 155px auto auto;
+}
 .sticky-nav {
   width: 100%;
   background: #222831;
@@ -48,6 +52,9 @@ body {
 }
 nav {
   position: fixed;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
   transition: 0.1s;
 }
@@ -66,6 +73,14 @@ nav > ul > li > a {
   font-family: "Oswald", sans-serif !important;
   font-size: 22px;
   letter-spacing: 0.5px;
+}
+.refresh {
+  margin: 65px 155px auto auto;
+  cursor: pointer;
+  padding: 15px;
+  border-radius: 10px;
+  background: #393e46;
+  transition: 0.1s all;
 }
 .header-main {
   padding-top: 220px;
@@ -113,7 +128,7 @@ nav > ul > li > a {
   position: relative;
 }
 .search-box {
-  background: #393E46;
+  background: #393e46;
   display: flex;
   align-items: center;
   width: 50%;
@@ -151,7 +166,7 @@ nav > ul > li > a {
   justify-content: space-evenly;
   /* flex-basis: 25%; */
   align-items: center;
-  background: #393E46;
+  background: #393e46;
   border-radius: 15px !important;
   padding: 15px;
 }
@@ -184,8 +199,8 @@ nav > ul > li > a {
 }
 .warning {
   text-align: center;
-  color: red;
-  background: white;
+  color: #fff;
+  background: #393e46;
   border-radius: 15px;
   width: 97%;
   margin: 30px auto;
@@ -210,11 +225,15 @@ nav > ul > li > a {
   .table-head {
     font-size: 12px;
   }
+  .refresh,
+  .sticky-nav > div {
+    margin: 15px;
+  }
   nav > ul,
   .sticky-nav > ul {
-    padding-top: 10px !important;
-    padding-left: 40px !important;
-    padding-bottom: 10px;
+    padding-top: 8px !important;
+    padding-left: 30px !important;
+    padding-bottom: 8px;
   }
   nav > ul > li > a {
     font-size: 18px;
@@ -239,10 +258,14 @@ nav > ul > li > a {
 }
 
 .about {
+  position: relative; 
   text-align: center;
-  padding-top: 200px;
+  top: 200px;
   width: 90%;
+  padding: 20px;
+  border-radius: 10px;
   margin: 0 auto;
+  background: #393e46;
 }
 .about > a {
   color: red;
